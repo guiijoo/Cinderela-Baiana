@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         if(collider.gameObject.tag == "altere")
         {
             contAltere++;
-            if(contAltere == 8)
+            if(contAltere == 10)
             {
                 poderMaximo = true;
             }
@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
     private IEnumerator TextoAltere()
     {
         textoAlteres.gameObject.SetActive(true);
-        textoAlteres.text = "Você coletou "+ contAltere +" de 8 Alteres!";
+        textoAlteres.text = "Você coletou "+ contAltere +" de 10 Alteres!";
         yield return new WaitForSeconds(3f);
         textoAlteres.gameObject.SetActive(false);
     }
