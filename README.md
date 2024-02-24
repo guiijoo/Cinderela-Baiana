@@ -49,7 +49,7 @@
     <li>arrumar animação cinderela(só voa com 7 e luz vermelah com 5)</li>
     <li>mudar alteres de lugar</li>
     <li>dublagem camila</li>
-    <li>cinderela só aparece quando o carlos chegar perto da jaula</li>>
+    <li>cinderela só aparece quando o carlos chegar perto da jaula</li>
     <li>animação dança de vitoria</li>
     <li>achar animação morte cinderela</li>
     <li>fazer tela de vitoria</li>
