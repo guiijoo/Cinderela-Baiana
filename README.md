@@ -1,6 +1,18 @@
 # Cinderella Baiana
 <p> niggames </p>
 <h2> ainda falta finalizar: </h2>
+
+* tentar mxer na animaçaõ de ataque(cinderela)
+* fazer tela de vitoria
+* fazer o sistema de desbloqueio da jaula
+* achar animação morte cinderela
+* animação dança de vitoria
+* arrumar botão de recomeçar
+* arrumar menu
+* colocar trailer
+* disfarçar as paredes
+* melhorar a ia da cinderela
+* arrumar tamanho no bake
 * parede do jogo
 * decorar parede invisivel
 * arrumar animação cinderela(só voa com 7 e luz vermelah com 5)
@@ -15,11 +27,11 @@
 * PARTE DO DIA
 * dublagem camila
 * interno dos lugares interativos
-* sistema de interação pelo 'e'
+* sistema de interação pelo e
 * balão de texto
 * menu de pausa
 * sistema de missão diaria
-* igreja: 'não é bem vindo pq é preto'
+* igreja: não é bem vindo pq é preto
 * cinderela só aparece quando o carlos chegar perto da jaula
 * colocar o dr penis
 * historinhas iniciais (narrado pelo carlos)
@@ -31,15 +43,3 @@
     3. ir na igreja
     4. academia malhar
     5. va até a praça
-
-* tentar mxer na animaçaõ de ataque(cinderela)
-* fazer tela de vitoria
-* fazer o sistema de desbloqueio da jaula
-* achar animação morte cinderela
-* animação dança de vitoria
-* arrumar botão de recomeçar
-* arrumar menu
-* colocar trailer
-* disfarçar as paredes
-* melhorar a ia da cinderela
-* arrumar tamanho no bake
