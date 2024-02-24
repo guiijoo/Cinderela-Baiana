@@ -25,6 +25,7 @@
 * historinhas iniciais (narrado pelo carlos)
 * imagens de inicio, q nem jogo grande
 * missões:
+
     1. roubar banco
     2. mercado roubar
     3. ir na igreja
