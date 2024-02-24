@@ -1,5 +1,5 @@
 # Cinderella Baiana
-<h1> niggames </h1>
+<p> niggames </p>
 <h2> ainda falta finalizar: </h2>
 * parede do jogo
 * decorar parede invisivel
@@ -24,8 +24,8 @@
 * colocar o dr penis
 * historinhas iniciais (narrado pelo carlos)
 * imagens de inicio, q nem jogo grande
-* missões:
-
+* missões
+    
     1. roubar banco
     2. mercado roubar
     3. ir na igreja
