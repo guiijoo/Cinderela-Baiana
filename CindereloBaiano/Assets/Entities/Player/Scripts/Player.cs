@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     public Camera cameraPlayer;
     public TextMeshProUGUI textoAlteres;
     public TextMeshProUGUI textoInicial;
+    public Transform cinderella;
+    public Transform cinderellaBaiana;
 
 
     private float velocidadePlayer;
@@ -72,6 +74,14 @@ public class Player : MonoBehaviour
         if(collider.gameObject.tag == "altere")
         {
             contAltere++;
+
+            if(contAltere == 5)
+            {
+                inimigo.GetComponent<Enemy>().raiva = true;
+                cinderellaBaiana.gameObject.SetActive(true);
+                cinderella.gameObject.SetActive(false);
+            }
+
             if(contAltere == 10)
             {
                 poderMaximo = true;

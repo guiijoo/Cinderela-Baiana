@@ -1,49 +1,9 @@
 fileFormatVersion: 2
-guid: e2129a53529f9054cae93f89aaaa512b
+guid: af6f5fa3b5b679642ac3ec39ba2efdcb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: m0
-    second: {fileID: 2100000, guid: 5dce193f0db0944438d1ee086ebf2204, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: m1
-    second: {fileID: 2100000, guid: a1a07734ce4e22b49ae273a1ea5f06e9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: m2
-    second: {fileID: 2100000, guid: fbc81d06f297b1248ab9dc5de25b590f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: m3
-    second: {fileID: 2100000, guid: db3582e32695e7e46b093681e6aacf6c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: m4
-    second: {fileID: 2100000, guid: b5ceffb8eefc9fc48b1528b2b1b7f50f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: m5
-    second: {fileID: 2100000, guid: 1865cde708b0bc340989cc7d02cd00da, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: m6
-    second: {fileID: 2100000, guid: f41beaaf194ccb246ab0b687390250f7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: m7
-    second: {fileID: 2100000, guid: 34eee130f42163d4e89f52ee8b095f84, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -57,10 +17,13 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Avatar Rig Configuration mis-match. Bone length in configuration
-      does not match position in animation file:\n\t'mixamorig:LeftFoot' : position
-      error = 85.389725 mm\n\t'mixamorig:RightFoot' : position error = 99.797577
-      mm\n"
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
+      copied configuration does not match position in animation file:\n\t'mixamorig:LeftUpLeg'
+      : position error = 21.487665 mm\n\t'mixamorig:LeftLeg' : position error = 7.698211
+      mm\n\t'mixamorig:LeftFoot' : position error = 85.715645 mm\n\t'mixamorig:RightUpLeg'
+      : position error = 21.475147 mm\n\t'mixamorig:RightLeg' : position error =
+      7.693915 mm\n\t'mixamorig:RightFoot' : position error = 100.074921 mm\n\t'mixamorig:RightToeBase'
+      : position error = 1.158131 mm\n"
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -80,7 +43,7 @@ ModelImporter:
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 133
+      lastFrame: 54
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -91,10 +54,10 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -918,11 +881,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 6d689d0ea84ff0249a8674086b9f1cca, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

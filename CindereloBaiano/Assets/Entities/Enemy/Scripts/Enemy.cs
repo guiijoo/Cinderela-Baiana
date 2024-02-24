@@ -7,21 +7,26 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
 
-    private GameObject player;
+    public bool raiva = false;
     public float velocidadeOriginal = 0.5f;
+
+    private GameObject player;
     private NavMeshAgent navMesh;
     private Animator animInimigo;
     private GameObject ataque;
+    private GameObject olhosdeRaiva;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        olhosdeRaiva = GameObject.FindWithTag("OlhosRaiva");
         animInimigo = GetComponent<Animator>();
         navMesh = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.FindWithTag("Player");
         ataque = GameObject.FindWithTag("peCind");
         ataque.SetActive(false);
+        olhosdeRaiva.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,6 +43,13 @@ public class Enemy : MonoBehaviour
             animInimigo.SetBool("attack", true);
             StartCoroutine("attack");
         }
+
+        if(raiva == true)
+        {
+            animInimigo.SetBool("raiva", true);
+            olhosdeRaiva.SetActive(true);
+        }
+
     }
 
     IEnumerator attack()
