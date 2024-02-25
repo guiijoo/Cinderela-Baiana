@@ -7,7 +7,6 @@
 <ul>
     <li>arrumar menu</li>
     <li>colocar trailer</li>
-    <li>arrumar carlos(lanterna, oculos e cabeça)</li>
     <li>trilha sonora</li>
     <li>imagens de inicio, q nem jogo grande</li>
 </ul>
@@ -16,13 +15,12 @@
 <ul>
     <li>disfarçar as paredes</li>
     <li>parede do jogo</li>
+    <li>colisao de parede olha pra tras</li>
     <li>decorar parede invisivel</li>
     <li>caminho ate a daia</li>
-    <li>wesley lava car</li>
     <li>tirar as placa fudida</li>
     <li>Funções no dia</li>
     <li>interno dos lugares interativos</li>
-    <li>sistema de interação pelo 'e'</li>
     <li>balão de texto</li>
     <li>menu de pausa</li>
     <li>sistema de missão diaria</li>
@@ -42,7 +40,6 @@
 
 <h2> Noite </h2>
 <ul>
-    <li>tentar mxer na animaçaõ de ataque(cinderela)</li>
     <li>fazer o sistema de desbloqueio da jaula</li>
     <li>melhorar a ia da cinderela</li>
     <li>arrumar tamanho no bake</li>
