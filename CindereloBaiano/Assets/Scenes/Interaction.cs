@@ -14,6 +14,7 @@ public class Interaction : MonoBehaviour
     public GameObject portaIgreja;
     public GameObject portaAcademia;
     public GameObject gaiola;
+    public GameObject casaDaia;
 
     private GameObject player;
 
@@ -24,6 +25,17 @@ public class Interaction : MonoBehaviour
 
     void Update()
     {
+        if(Vector3.Distance(casaDaia.transform.position, player.transform.position) < 30f)
+        {
+            mensagemInteracao.gameObject.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                // float posicaoPlayer = new Vector3(124.10952,0.336427212,-8.13710117);
+                // player.transform.position = posicaoPlayer;
+            }
+        }
+
+
         if(Vector3.Distance(portaCasa.transform.position, player.transform.position) < 5f) //interagindo com a porta da casa
         {
 
