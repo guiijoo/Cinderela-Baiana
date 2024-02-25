@@ -9,7 +9,7 @@ public class DeuCerto : MonoBehaviour
         float playerPosX = PlayerPrefs.GetFloat("playerPosX");
         float playerPosY = PlayerPrefs.GetFloat("playerPosY");
         float playerPosZ = PlayerPrefs.GetFloat("playerPosZ");
-    // Start is called before the first frame update
+        
     void Start()
     {
         
@@ -24,10 +24,7 @@ public class DeuCerto : MonoBehaviour
     private IEnumerator Certo()
     {
         yield return new WaitForSeconds(2f);
-        PlayerPrefs.SetFloat("playerPosX", playerPosX);
-        PlayerPrefs.SetFloat("playerPosY", playerPosY);
-        PlayerPrefs.SetFloat("playerPosZ", playerPosZ);
-        // PlayerPrefs.SetInt("praCasa", 1);
+        PlayerPrefs.SetInt("praCasa", 0);
         SceneManager.LoadScene("Day");
     }
 }
