@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,15 +23,29 @@ public class Player : MonoBehaviour
     private int contAltere = 0;
     private GameObject inimigo;
 
-
     void Start()
     {
+        Vector3 playerPosition = transform.position;
         anim = GetComponent<Animator>();
         textoAlteres.gameObject.SetActive(false);
         inimigo = GameObject.FindWithTag("inimigo");
         StartCoroutine(MensagemInicial());
     }
 
+    void OnEnable()
+    {
+        float playerPosX = PlayerPrefs.GetFloat("playerPosX");
+        float playerPosY = PlayerPrefs.GetFloat("playerPosY");
+        float playerPosZ = PlayerPrefs.GetFloat("playerPosZ");
+        if(playerPosX != 0)
+        {
+            Vector3 playerPosition = new Vector3(playerPosX, playerPosY, playerPosZ);
+            transform.position = playerPosition;
+            PlayerPrefs.SetFloat("playerPosX", 0);
+            PlayerPrefs.SetFloat("playerPosY", 0);
+            PlayerPrefs.SetFloat("playerPosZ", 0);
+        }
+    }
 
     void Update()
     {

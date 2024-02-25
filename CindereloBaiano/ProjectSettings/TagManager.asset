@@ -8,6 +8,7 @@ TagManager:
   - inimigo
   - altere
   - OlhosRaiva
+  - MissionText
   layers:
   - Default
   - TransparentFX
