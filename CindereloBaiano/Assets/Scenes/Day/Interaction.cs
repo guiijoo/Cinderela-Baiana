@@ -36,37 +36,61 @@ public class Interaction : MonoBehaviour
         }
 
 
-        if(Vector3.Distance(portaCasa.transform.position, player.transform.position) < 5f) //interagindo com a porta da casa
+        if(Vector3.Distance(portaCasa.transform.position, player.transform.position) < 1.5f) //interagindo com a porta da casa
         {
 
             
             if(GetComponent<MissionController>().praCasa == false)
             {
-                Debug.Log("reconheceu a variavel");
+                mensagemInteracao.text = "Aperte 'E' para entrar!";
                 mensagemInteracao.gameObject.SetActive(true);
 
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     Debug.Log("apertou");
                     Vector3 playerPosition = player.transform.position;
-                    mensagemInteracao.gameObject.SetActive(false);
                     
                     PlayerPrefs.SetFloat("playerPosX", playerPosition.x);
                     PlayerPrefs.SetFloat("playerPosY", playerPosition.y);
                     PlayerPrefs.SetFloat("playerPosZ", playerPosition.z);
                     SceneManager.LoadScene("CasaCarlos");
 
-                }else
-                {
                 }
+
             }else if(GetComponent<MissionController>().praCasa == true){
 
                 Debug.Log("voce ja fez essa missao");
                 missionText.text = ("Você ja fez esta missão!");
                 missionText.gameObject.SetActive(true);
 
+            }
+
+        }else if(Vector3.Distance(portaBanco.transform.position, player.transform.position) < 1.5f){
+
+            if(GetComponent<MissionController>().praCasa == true && GetComponent<MissionController>().banco == false)
+            {
+                mensagemInteracao.text = "Aperte 'E' para entrar!";
+                mensagemInteracao.gameObject.SetActive(true);
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("apertou");
+                    Vector3 playerPosition = player.transform.position;
+                    
+                    PlayerPrefs.SetFloat("playerPosX", playerPosition.x);
+                    PlayerPrefs.SetFloat("playerPosY", playerPosition.y);
+                    PlayerPrefs.SetFloat("playerPosZ", playerPosition.z);
+                    SceneManager.LoadScene("Banco");
+
+                }
+            }else if(GetComponent<MissionController>().banco == true)
+            {
+                Debug.Log("voce ja fez essa missao");
+                missionText.text = ("Você ja fez esta missão!");
+                missionText.gameObject.SetActive(true);
             }else{
-                Debug.Log("não leu a variavel");
+                missionText.text = ("Você deve cumprir as outras missões antes!");
+                missionText.gameObject.SetActive(true);
             }
 
         }else{
