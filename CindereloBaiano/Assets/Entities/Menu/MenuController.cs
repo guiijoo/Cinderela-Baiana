@@ -7,7 +7,7 @@ public class MenuController : MonoBehaviour
 {
     public void Comecar()
     {
-        SceneManager.LoadScene("Night");
+        SceneManager.LoadScene("Day");
     }
 
     public void Sair()

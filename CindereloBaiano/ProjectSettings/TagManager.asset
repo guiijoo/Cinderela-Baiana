@@ -9,6 +9,7 @@ TagManager:
   - altere
   - OlhosRaiva
   - MissionText
+  - paoFrances
   layers:
   - Default
   - TransparentFX

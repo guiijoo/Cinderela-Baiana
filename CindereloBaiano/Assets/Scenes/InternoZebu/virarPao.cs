@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class virarPao : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform player;
+    public float velocidadeRotacao = 5f;
 
-    // Update is called once per frame
     void Update()
     {
+        Vector3 direcaoDoPlayer = player.position - transform.position;
+        direcaoDoPlayer.y = 0f;
+
+        Quaternion rotacaoAlvo = Quaternion.LookRotation(direcaoDoPlayer);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotacaoAlvo, velocidadeRotacao * Time.deltaTime);
         
     }
 }
