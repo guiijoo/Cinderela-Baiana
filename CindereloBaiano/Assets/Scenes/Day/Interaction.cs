@@ -65,7 +65,7 @@ public class Interaction : MonoBehaviour
 
             }
 
-        }else if(Vector3.Distance(portaBanco.transform.position, player.transform.position) < 1.5f){
+        }else if(Vector3.Distance(portaBanco.transform.position, player.transform.position) < 1.5f){ //interagindo com o banco
 
             if(GetComponent<MissionController>().praCasa == true && GetComponent<MissionController>().banco == false)
             {
@@ -84,6 +84,112 @@ public class Interaction : MonoBehaviour
 
                 }
             }else if(GetComponent<MissionController>().banco == true)
+            {
+                Debug.Log("voce ja fez essa missao");
+                missionText.text = ("Você ja fez esta missão!");
+                missionText.gameObject.SetActive(true);
+            }else{
+                missionText.text = ("Você deve cumprir as outras missões antes!");
+                missionText.gameObject.SetActive(true);
+            }
+
+        }else if(Vector3.Distance(portaMercado.transform.position, player.transform.position) < 1.5f){ //interagindo com o mercado
+
+            if(GetComponent<MissionController>().banco == true && GetComponent<MissionController>().zebu == false)
+            {
+                mensagemInteracao.text = "Aperte 'E' para entrar!";
+                mensagemInteracao.gameObject.SetActive(true);
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("apertou");
+                    Vector3 playerPosition = player.transform.position;
+                    
+                    PlayerPrefs.SetFloat("playerPosX", playerPosition.x);
+                    PlayerPrefs.SetFloat("playerPosY", playerPosition.y);
+                    PlayerPrefs.SetFloat("playerPosZ", playerPosition.z);
+                    SceneManager.LoadScene("InternoZebu");
+
+                }
+            }else if(GetComponent<MissionController>().zebu == true)
+            {
+                Debug.Log("voce ja fez essa missao");
+                missionText.text = ("Você ja fez esta missão!");
+                missionText.gameObject.SetActive(true);
+            }else{
+                missionText.text = ("Você deve cumprir as outras missões antes!");
+                missionText.gameObject.SetActive(true);
+            }
+
+        }else if(Vector3.Distance(portaIgreja.transform.position, player.transform.position) < 1.5f){ //interagindo com a igreja
+
+            if(GetComponent<MissionController>().zebu == true && GetComponent<MissionController>().igreja == false)
+            {
+                mensagemInteracao.text = "Aperte 'E' para entrar!";
+                mensagemInteracao.gameObject.SetActive(true);
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    missionText.text = "Pretos não são bem vindos aqui!";
+
+                }
+            }else if(GetComponent<MissionController>().igreja == true)
+            {
+                Debug.Log("voce ja fez essa missao");
+                missionText.text = ("Você ja fez esta missão!");
+                missionText.gameObject.SetActive(true);
+            }else{
+                missionText.text = ("Você deve cumprir as outras missões antes!");
+                missionText.gameObject.SetActive(true);
+            }
+
+        }else if(Vector3.Distance(portaAcademia.transform.position, player.transform.position) < 1.5f){ //interagindo com a academia
+
+            if(GetComponent<MissionController>().igreja == true && GetComponent<MissionController>().academia == false)
+            {
+                mensagemInteracao.text = "Aperte 'E' para entrar!";
+                mensagemInteracao.gameObject.SetActive(true);
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("apertou");
+                    Vector3 playerPosition = player.transform.position;
+                    
+                    PlayerPrefs.SetFloat("playerPosX", playerPosition.x);
+                    PlayerPrefs.SetFloat("playerPosY", playerPosition.y);
+                    PlayerPrefs.SetFloat("playerPosZ", playerPosition.z);
+                    SceneManager.LoadScene("Academia");
+
+                }
+            }else if(GetComponent<MissionController>().academia == true)
+            {
+                Debug.Log("voce ja fez essa missao");
+                missionText.text = ("Você ja fez esta missão!");
+                missionText.gameObject.SetActive(true);
+            }else{
+                missionText.text = ("Você deve cumprir as outras missões antes!");
+                missionText.gameObject.SetActive(true);
+            }
+
+        }else if(Vector3.Distance(portaAcademia.transform.position, player.transform.position) < 1.5f){ //interagindo com a praça
+
+            if(GetComponent<MissionController>().academia == true && GetComponent<MissionController>().praca == false)
+            {
+                mensagemInteracao.text = "Aperte 'E' para inspecionar!";
+                mensagemInteracao.gameObject.SetActive(true);
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("apertou");
+                    Vector3 playerPosition = player.transform.position;
+                    
+                    PlayerPrefs.SetFloat("playerPosX", playerPosition.x);
+                    PlayerPrefs.SetFloat("playerPosY", playerPosition.y);
+                    PlayerPrefs.SetFloat("playerPosZ", playerPosition.z);
+                    SceneManager.LoadScene("Night");
+
+                }
+            }else if(GetComponent<MissionController>().praca == true)
             {
                 Debug.Log("voce ja fez essa missao");
                 missionText.text = ("Você ja fez esta missão!");
