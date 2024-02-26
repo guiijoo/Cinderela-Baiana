@@ -13,17 +13,10 @@
 
 <h2> Dia </h2>
 <ul>
-    <li>disfarçar as paredes</li>
-    <li>parede do jogo</li>
-    <li>colisao de parede olha pra tras</li>
-    <li>decorar parede invisivel</li>
-    <li>caminho ate a daia</li>
-    <li>tirar as placa fudida</li>
     <li>Funções no dia</li>
     <li>interno dos lugares interativos</li>
     <li>balão de texto</li>
     <li>menu de pausa</li>
-    <li>sistema de missão diaria</li>
     <li>igreja: não é bem vindo pq é preto</li>
     <li>colocar o dr penis</li>
     <li>historinhas iniciais (narrado pelo carlos)</li>
