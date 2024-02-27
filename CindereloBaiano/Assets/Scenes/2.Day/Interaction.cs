@@ -21,21 +21,18 @@ public class Interaction : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        float playerPosX = PlayerPrefs.GetFloat("playerPosX");
+        float playerPosY = PlayerPrefs.GetFloat("playerPosY");
+        float playerPosZ = PlayerPrefs.GetFloat("playerPosZ");
+        if(playerPosX != 0)
+        {
+            Vector3 playerPosition = new Vector3(playerPosX, playerPosY, playerPosZ);
+            player.transform.position = playerPosition;
+        }
     }
 
     void Update()
     {
-        if(Vector3.Distance(casaDaia.transform.position, player.transform.position) < 30f)
-        {
-            mensagemInteracao.gameObject.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                // float posicaoPlayer = new Vector3(124.10952,0.336427212,-8.13710117);
-                // player.transform.position = posicaoPlayer;
-            }
-        }
-
-
         if(Vector3.Distance(portaCasa.transform.position, player.transform.position) < 1.5f) //interagindo com a porta da casa
         {
 
@@ -130,13 +127,14 @@ public class Interaction : MonoBehaviour
 
                 if(Input.GetKeyDown(KeyCode.E))
                 {
-                    missionText.text = "Pretos não são bem vindos aqui!";
-
+                    GetComponent<MissionController>().igreja = true;
+                    mensagemInteracao.gameObject.SetActive(false);
+                    PlayerPrefs.SetInt("igreja", 1);
                 }
             }else if(GetComponent<MissionController>().igreja == true)
             {
                 Debug.Log("voce ja fez essa missao");
-                missionText.text = ("Você ja fez esta missão!");
+                missionText.text = "Pretos não são bem vindos aqui!";
                 missionText.gameObject.SetActive(true);
             }else{
                 missionText.text = ("Você deve cumprir as outras missões antes!");
@@ -199,6 +197,15 @@ public class Interaction : MonoBehaviour
                 missionText.gameObject.SetActive(true);
             }
 
+        }else if(Vector3.Distance(casaDaia.transform.position, player.transform.position) < 30f)
+        {
+            mensagemInteracao.text = "Aperte 'E' para inspecionar!";
+            mensagemInteracao.gameObject.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                Vector3 posicaoPlayer = portaWesley.transform.position;
+                player.transform.position = posicaoPlayer;
+            }
         }else{
             missionText.gameObject.SetActive(false);
             mensagemInteracao.gameObject.SetActive(false);

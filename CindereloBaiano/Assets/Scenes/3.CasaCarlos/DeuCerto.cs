@@ -24,7 +24,7 @@ public class DeuCerto : MonoBehaviour
     private IEnumerator Certo()
     {
         yield return new WaitForSeconds(2f);
-        PlayerPrefs.SetInt("praCasa", 0);
+        PlayerPrefs.SetInt("praCasa", 1);
         SceneManager.LoadScene("Day");
     }
 }

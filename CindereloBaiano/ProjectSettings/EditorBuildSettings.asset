@@ -6,16 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu/Menu.unity
+    path: Assets/Scenes/1.Menu/Menu.unity
     guid: 366916993fca2e148a398fd425102d89
   - enabled: 1
-    path: Assets/Scenes/Day/Day.unity
+    path: Assets/Scenes/2.Day/Day.unity
     guid: e24b9d0332fa9ac428ad281bc831e593
   - enabled: 1
-    path: Assets/Scenes/CasaCarlos/CasaCarlos.unity
+    path: Assets/Scenes/3.CasaCarlos/CasaCarlos.unity
     guid: 2ef798296dfc5cd4cb6d4bee82b42dfe
   - enabled: 1
-    path: Assets/Scenes/Night/Night.unity
+    path: Assets/Scenes/4.Banco/Banco.unity
+    guid: 77e8055401044a24e9e411e0e6beb418
+  - enabled: 1
+    path: Assets/Scenes/5.InternoZebu/InternoZebu.unity
+    guid: 4220a4d8513f9b64f94d37fa4b38ec99
+  - enabled: 1
+    path: Assets/Scenes/6.Academia/Academia.unity
+    guid: 0967519fa2b51e046aeb270034f94d76
+  - enabled: 1
+    path: Assets/Scenes/7.Night/Night.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/GameOver/GameOver.unity
