@@ -17,14 +17,10 @@
     <li>interno dos lugares interativos</li>
     <li>balão de texto</li>
     <li>menu de pausa</li>
-    <li>igreja: não é bem vindo pq é preto</li>
-    <li>colocar o dr penis</li>
     <li>historinhas iniciais (narrado pelo carlos)</li>
     <li>missões:</li>
         <ol>
             <li>roubar banco</li>
-            <li>mercado roubar</li>
-            <li>ir na igreja</li>
             <li>academia malhar</li>
             <li>va até a praça</li>
         </ol>
