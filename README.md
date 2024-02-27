@@ -14,7 +14,6 @@
 <h2> Dia </h2>
 <ul>
     <li>Funções no dia</li>
-    <li>interno dos lugares interativos</li>
     <li>balão de texto</li>
     <li>menu de pausa</li>
     <li>historinhas iniciais (narrado pelo carlos)</li>
