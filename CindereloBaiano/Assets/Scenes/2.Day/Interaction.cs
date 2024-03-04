@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,7 +15,10 @@ public class Interaction : MonoBehaviour
     public GameObject portaIgreja;
     public GameObject portaAcademia;
     public GameObject casaDaia;
+    public GameObject casaNovaDaia;
     public GameObject portaWesley;
+
+    public GameObject jaula;
 
     private GameObject player;
 
@@ -29,11 +33,26 @@ public class Interaction : MonoBehaviour
             Vector3 playerPosition = new Vector3(playerPosX, playerPosY, playerPosZ);
             player.transform.position = playerPosition;
         }
+        if(GetComponent<MissionController>().praca == true)
+        {
+            SceneManager.LoadScene("Night");
+        }
     }
 
     void Update()
     {
+        if(GetComponent<MissionController>().academia == true)
+        {
+            jaula.gameObject.SetActive(true);
+        }else{
+            jaula.gameObject.SetActive(false);
+        }
+
+<<<<<<< HEAD
+        if(Vector3.Distance(portaCasa.transform.position, player.transform.position) < 2f) //interagindo com a porta da casa
+=======
         if(Vector3.Distance(portaCasa.transform.position, player.transform.position) < 1.5f) //interagindo com a porta da casa
+>>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
         {
 
             
@@ -62,7 +81,7 @@ public class Interaction : MonoBehaviour
 
             }
 
-        }else if(Vector3.Distance(portaBanco.transform.position, player.transform.position) < 1.5f){ //interagindo com o banco
+        }else if(Vector3.Distance(portaBanco.transform.position, player.transform.position) < 2f){ //interagindo com o banco
 
             if(GetComponent<MissionController>().praCasa == true && GetComponent<MissionController>().banco == false)
             {
@@ -90,7 +109,7 @@ public class Interaction : MonoBehaviour
                 missionText.gameObject.SetActive(true);
             }
 
-        }else if(Vector3.Distance(portaMercado.transform.position, player.transform.position) < 1.5f){ //interagindo com o mercado
+        }else if(Vector3.Distance(portaMercado.transform.position, player.transform.position) < 2f){ //interagindo com o mercado
 
             if(GetComponent<MissionController>().banco == true && GetComponent<MissionController>().zebu == false)
             {
@@ -118,7 +137,7 @@ public class Interaction : MonoBehaviour
                 missionText.gameObject.SetActive(true);
             }
 
-        }else if(Vector3.Distance(portaIgreja.transform.position, player.transform.position) < 1.5f){ //interagindo com a igreja
+        }else if(Vector3.Distance(portaIgreja.transform.position, player.transform.position) < 2f){ //interagindo com a igreja
 
             if(GetComponent<MissionController>().zebu == true && GetComponent<MissionController>().igreja == false)
             {
@@ -141,7 +160,7 @@ public class Interaction : MonoBehaviour
                 missionText.gameObject.SetActive(true);
             }
 
-        }else if(Vector3.Distance(portaAcademia.transform.position, player.transform.position) < 1.5f){ //interagindo com a academia
+        }else if(Vector3.Distance(portaAcademia.transform.position, player.transform.position) < 2f){ //interagindo com a academia
 
             if(GetComponent<MissionController>().igreja == true && GetComponent<MissionController>().academia == false)
             {
@@ -169,7 +188,7 @@ public class Interaction : MonoBehaviour
                 missionText.gameObject.SetActive(true);
             }
 
-        }else if(Vector3.Distance(portaAcademia.transform.position, player.transform.position) < 1.5f){ //interagindo com a praça
+        }else if(Vector3.Distance(jaula.transform.position, player.transform.position) < 5f){ //interagindo com a jaula
 
             if(GetComponent<MissionController>().academia == true && GetComponent<MissionController>().praca == false)
             {
@@ -180,7 +199,8 @@ public class Interaction : MonoBehaviour
                 {
                     Debug.Log("apertou");
                     Vector3 playerPosition = player.transform.position;
-                    
+                    PlayerPrefs.SetInt("jaula",1);
+                    GetComponent<MissionController>().praca = true;
                     PlayerPrefs.SetFloat("playerPosX", playerPosition.x);
                     PlayerPrefs.SetFloat("playerPosY", playerPosition.y);
                     PlayerPrefs.SetFloat("playerPosZ", playerPosition.z);
@@ -192,27 +212,43 @@ public class Interaction : MonoBehaviour
                 Debug.Log("voce ja fez essa missao");
                 missionText.text = ("Você ja fez esta missão!");
                 missionText.gameObject.SetActive(true);
-            }else{
-                missionText.text = ("Você deve cumprir as outras missões antes!");
-                missionText.gameObject.SetActive(true);
             }
 
-        }else if(Vector3.Distance(casaDaia.transform.position, player.transform.position) < 30f)
+        }else if(Vector3.Distance(casaDaia.transform.position, player.transform.position) < 15f) // casa da daia
         {
             mensagemInteracao.text = "Aperte 'E' para inspecionar!";
             mensagemInteracao.gameObject.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                Vector3 posicaoPlayer = portaWesley.transform.position;
+                Vector3 posicaoPlayer = casaNovaDaia.transform.position;
                 player.transform.position = posicaoPlayer;
             }
+<<<<<<< HEAD
+        }else if(Vector3.Distance(portaWesley.transform.position, player.transform.position) < 2f){ //interagindo com wesley
+=======
+        }else if(Vector3.Distance(portaWesley.transform.position, player.transform.position) < 1.5f){ //interagindo com wesley
+>>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
+                mensagemInteracao.text = "Aperte 'E' para entrar!";
+                mensagemInteracao.gameObject.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    Vector3 playerPosition = player.transform.position;
+                    
+                    PlayerPrefs.SetFloat("playerPosX", playerPosition.x);
+                    PlayerPrefs.SetFloat("playerPosY", playerPosition.y);
+                    PlayerPrefs.SetFloat("playerPosZ", playerPosition.z);
+                    SceneManager.LoadScene("WesleyLavacar");
+                }
         }else{
-            missionText.gameObject.SetActive(false);
-            mensagemInteracao.gameObject.SetActive(false);
+                missionText.gameObject.SetActive(false);
+                mensagemInteracao.gameObject.SetActive(false);
         }
     }
-
+<<<<<<< HEAD
+}
+=======
 }
 /*
 Alterei para aparecer a mensagem de interação apenas se o usuário não tiver feito a missão daquela porta, caso contrário irá aparecer que ele já fez aquela missão
 */
+>>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef

@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public bool poderMaximo = false;
     public float velocidadeCorrida = 5;
     public float velocidadeAndar = 2;
+    public AudioSource audioPassos;
     public Camera cameraPlayer;
     public TextMeshProUGUI textoAlteres;
     public TextMeshProUGUI textoInicial;
@@ -72,7 +73,7 @@ public class Player : MonoBehaviour
         {
             contAltere++;
 
-            if(contAltere == 5)
+            if(contAltere == 7)
             {
                 inimigo.GetComponent<Enemy>().raiva = true;
                 cinderellaBaiana.gameObject.SetActive(true);
@@ -86,7 +87,7 @@ public class Player : MonoBehaviour
 
             if(contAltere % 2 == 0)
             {
-                inimigo.GetComponent<Enemy>().velocidadeOriginal*=1.5f;
+                inimigo.GetComponent<Enemy>().velocidadeOriginal*=1.2f;
             }
 
             StartCoroutine(TextoAltere());
@@ -110,5 +111,10 @@ public class Player : MonoBehaviour
         textoAlteres.text = "Você coletou "+ contAltere +" de 10 Alteres!";
         yield return new WaitForSeconds(3f);
         textoAlteres.gameObject.SetActive(false);
+    }
+
+    public void SonsPassos()
+    {
+        audioPassos.Play();
     }
 }

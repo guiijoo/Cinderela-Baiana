@@ -29,17 +29,5 @@ public class aproximar : MonoBehaviour
                     pao.gameObject.SetActive(false);
                 }
         }
-
-        // if(Vector3.Distance(transform.position, pao.transform.position)<1f)
-        // {
-        //     mensageInteracao.gameObject.SetActive(true);
-        //     if(Input.GetKeyDown(KeyCode.E))
-        //     {
-        //         missionController.GetComponent<MissionCompleteZebu>().pao = true;
-        //         pao.gameObject.SetActive(false);
-        //     }
-        // }else{
-        //     mensageInteracao.gameObject.SetActive(false);
-        // }
     }
 }
