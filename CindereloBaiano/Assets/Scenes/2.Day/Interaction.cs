@@ -220,7 +220,6 @@ public class Interaction : MonoBehaviour
                 player.transform.position = posicaoPlayer;
             }
         }else if(Vector3.Distance(portaWesley.transform.position, player.transform.position) < 2f){ //interagindo com wesley
-        }else if(Vector3.Distance(portaWesley.transform.position, player.transform.position) < 1.5f){ //interagindo com wesley
                 mensagemInteracao.text = "Aperte 'E' para entrar!";
                 mensagemInteracao.gameObject.SetActive(true);
                 if(Input.GetKeyDown(KeyCode.E))
@@ -238,6 +237,3 @@ public class Interaction : MonoBehaviour
         }
     }
 }
-/*
-Alterei para aparecer a mensagem de interação apenas se o usuário não tiver feito a missão daquela porta, caso contrário irá aparecer que ele já fez aquela missão
-*/

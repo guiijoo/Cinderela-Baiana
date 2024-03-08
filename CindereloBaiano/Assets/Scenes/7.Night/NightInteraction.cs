@@ -13,7 +13,10 @@ public class NightInteraction : MonoBehaviour
     public TextMeshProUGUI interagir;
     public TextMeshProUGUI missionTXT;
     
-
+    void Start()
+    {
+        interagir.gameObject.SetActive(false);
+    }
     void Update()
     {
         if(Vector3.Distance(player.transform.position, jaula.transform.position)< 5f)
