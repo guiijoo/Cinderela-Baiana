@@ -48,11 +48,7 @@ public class Interaction : MonoBehaviour
             jaula.gameObject.SetActive(false);
         }
 
-<<<<<<< HEAD
         if(Vector3.Distance(portaCasa.transform.position, player.transform.position) < 2f) //interagindo com a porta da casa
-=======
-        if(Vector3.Distance(portaCasa.transform.position, player.transform.position) < 1.5f) //interagindo com a porta da casa
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
         {
 
             
@@ -223,11 +219,8 @@ public class Interaction : MonoBehaviour
                 Vector3 posicaoPlayer = casaNovaDaia.transform.position;
                 player.transform.position = posicaoPlayer;
             }
-<<<<<<< HEAD
         }else if(Vector3.Distance(portaWesley.transform.position, player.transform.position) < 2f){ //interagindo com wesley
-=======
         }else if(Vector3.Distance(portaWesley.transform.position, player.transform.position) < 1.5f){ //interagindo com wesley
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
                 mensagemInteracao.text = "Aperte 'E' para entrar!";
                 mensagemInteracao.gameObject.SetActive(true);
                 if(Input.GetKeyDown(KeyCode.E))
@@ -244,11 +237,7 @@ public class Interaction : MonoBehaviour
                 mensagemInteracao.gameObject.SetActive(false);
         }
     }
-<<<<<<< HEAD
-}
-=======
 }
 /*
 Alterei para aparecer a mensagem de interação apenas se o usuário não tiver feito a missão daquela porta, caso contrário irá aparecer que ele já fez aquela missão
 */
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef

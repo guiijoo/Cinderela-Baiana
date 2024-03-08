@@ -1219,7 +1219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 293dca6e873dbf94aa74c6482323518c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   image: {fileID: 769692732}
 --- !u!82 &1250564421
 AudioSource:
@@ -1317,8 +1316,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!1 &1318623247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,20 +1340,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318623247}
-<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-=======
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< HEAD
   m_Father: {fileID: 2125691844}
-=======
-  m_Father: {fileID: 1516597411}
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1375,17 +1364,12 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8fe76ac10f4b4144799dbd829dd81da4, type: 3}
   m_PlayOnAwake: 1
-<<<<<<< HEAD
   m_Volume: 0.5
-=======
-  m_Volume: 0.48
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-<<<<<<< HEAD
   Priority: 0
   DopplerLevel: 1
   MinDistance: 1
@@ -1534,8 +1518,6 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -1614,7 +1596,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-<<<<<<< HEAD
 --- !u!114 &1353746346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1768,8 +1749,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353746342}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!1 &1516597407
 GameObject:
   m_ObjectHideFlags: 0

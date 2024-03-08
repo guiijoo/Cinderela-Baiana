@@ -285,7 +285,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1286427560345477323, guid: a4c99065560f3ba4c9177d6e249e9ec5, type: 3}
-<<<<<<< HEAD
 --- !u!1 &63305654
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,8 +379,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!65 &78489586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2465,7 +2462,6 @@ Transform:
   - {fileID: 1214002789}
   m_Father: {fileID: 605083621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &727539471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,8 +2703,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 90, z: -90}
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!64 &756781250
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2967,7 +2961,6 @@ Transform:
   - {fileID: 918375268}
   m_Father: {fileID: 334029692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!43 &838691827
 Mesh:
   m_ObjectHideFlags: 0
@@ -3133,8 +3126,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!65 &907777989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3299,7 +3290,6 @@ Transform:
   - {fileID: 1287783217}
   m_Father: {fileID: 29038200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &932450068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3428,8 +3418,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!64 &948931291
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3669,10 +3657,7 @@ GameObject:
   - component: {fileID: 1038380480}
   - component: {fileID: 1038380482}
   - component: {fileID: 1038380481}
-<<<<<<< HEAD
   - component: {fileID: 1038380483}
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
   m_Layer: 5
   m_Name: CarlosDrPenis
   m_TagString: Untagged
@@ -3734,7 +3719,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038380479}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
 --- !u!82 &1038380483
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3831,8 +3815,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!65 &1047729091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4274,7 +4256,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1600980605}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!43 &1130183568
 Mesh:
   m_ObjectHideFlags: 0
@@ -4440,8 +4421,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!65 &1134187310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5341,8 +5320,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6946868759442727253, guid: a4c99065560f3ba4c9177d6e249e9ec5, type: 3}
-<<<<<<< HEAD
-=======
 --- !u!1 &1397302974
 GameObject:
   m_ObjectHideFlags: 0
@@ -5437,7 +5414,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1600980605}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!1 &1405800812
 GameObject:
   m_ObjectHideFlags: 0
@@ -6055,17 +6031,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-<<<<<<< HEAD
   - {fileID: 63305655}
   - {fileID: 1955029589}
   - {fileID: 932450069}
   - {fileID: 1126133126}
   - {fileID: 1711586353}
-=======
-  - {fileID: 1126133126}
-  - {fileID: 1711586353}
-  - {fileID: 1397302976}
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
   - {fileID: 543450653311576685}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6820,7 +6790,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1600980605}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &1714124001
 GameObject:
   m_ObjectHideFlags: 0
@@ -6949,8 +6918,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!1 &1719692090
 GameObject:
   m_ObjectHideFlags: 0
@@ -8597,7 +8564,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 626385622}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &2091726635
 GameObject:
   m_ObjectHideFlags: 0
@@ -8839,8 +8805,6 @@ VideoPlayer:
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 --- !u!64 &2095639539
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19574,8 +19538,5 @@ SceneRoots:
   - {fileID: 1098515066}
   - {fileID: 194952809}
   - {fileID: 1701336091}
-<<<<<<< HEAD
   - {fileID: 2091726641}
   - {fileID: 727539478}
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef

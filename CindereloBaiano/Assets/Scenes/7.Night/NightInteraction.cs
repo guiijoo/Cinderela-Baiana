@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 using TMPro;
-=======
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEditor.SearchService;
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
