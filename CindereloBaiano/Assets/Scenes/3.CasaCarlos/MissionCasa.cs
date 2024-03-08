@@ -31,7 +31,7 @@ public class MissionCasa : MonoBehaviour
     {
         if(podeAparecer == true)
         {
-            if(Vector3.Distance(player.transform.position, carta.transform.position)<1.3f)
+            if(Vector3.Distance(player.transform.position, carta.transform.position)<2f)
             {
                 if(lendo == false)
                 {
@@ -90,6 +90,7 @@ public class MissionCasa : MonoBehaviour
             missionText.gameObject.SetActive(true);
             }else{
                 missionText.gameObject.SetActive(false);
+                Debug.Log("eu quero é sexooo");
             }
         }
         
