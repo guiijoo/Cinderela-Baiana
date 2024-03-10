@@ -2602,7 +2602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 62516782739a6d5419350a94e5551996, type: 3}
+  m_Texture: {fileID: 2800000, guid: 10c8fd2f97036a44786082621453bd9b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3497,10 +3497,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7f127f8bbe2ea4aadd5374733bbc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balaoTxt: {fileID: 986484800}
-  balaoCor: {fileID: 737410133}
   textoBalao: {fileID: 5122569}
   sair: {fileID: 998853057}
+  cameraa: {fileID: 287400902}
+  carta: {fileID: 1581032810}
+  balaoTxt: {fileID: 986484800}
+  balaoCor: {fileID: 737410133}
   imageCarlos: {fileID: 1170654625}
   imageCamila: {fileID: 0}
 --- !u!1 &1103612765
@@ -5037,7 +5039,7 @@ GameObject:
   - component: {fileID: 1587813990}
   - component: {fileID: 1587813989}
   m_Layer: 0
-  m_Name: 
+  m_Name: missionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

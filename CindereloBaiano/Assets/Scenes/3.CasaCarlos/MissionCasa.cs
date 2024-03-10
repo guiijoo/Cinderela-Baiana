@@ -60,21 +60,6 @@ public class MissionCasa : MonoBehaviour
                         }
                     }
                 }
-            }else if(Vector3.Distance(porta.transform.position, player.transform.position)<1.5f){
-                if(leu == true)
-                {
-                    mensagemInteracao.gameObject.SetActive(true);
-                    if(Input.GetKeyDown(KeyCode.E))
-                    {
-                        PlayerPrefs.SetInt("praCasa", 1);
-                        SceneManager.LoadScene("Day");
-
-                    }
-                }else
-                {
-                    missionText.text = "Você deve encontrar a carta";
-                    missionText.gameObject.SetActive(true);
-                }   
                 
             }else{
                 missionText.gameObject.SetActive(false);
@@ -83,16 +68,27 @@ public class MissionCasa : MonoBehaviour
                 cartaAberta.gameObject.SetActive(false);
             }
             
-        }else if(podeAparecer == false || leu == false)
-        {
-            if(Vector3.Distance(porta.transform.position, player.transform.position)<1.3f){
-            missionText.text = "Você deve encontrar a carta";
-            missionText.gameObject.SetActive(true);
-            }else{
-                missionText.gameObject.SetActive(false);
-            }
-        }
+        }else if(Vector3.Distance(porta.transform.position, player.transform.position)<1.5f){
+            if(leu == true)
+            {
+                mensagemInteracao.gameObject.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    PlayerPrefs.SetInt("praCasa", 1);
+                    SceneManager.LoadScene("Day");
+                }
+            }else
+            {
+                missionText.text = "Você deve encontrar a carta";
+                missionText.gameObject.SetActive(true);
+            }   
         
+        }else{
+                missionText.gameObject.SetActive(false);
+                mensagemInteracao.gameObject.SetActive(false);
+                mensagemSair.gameObject.SetActive(false);
+                cartaAberta.gameObject.SetActive(false);
+        }
     }
 
 
@@ -100,7 +96,9 @@ public class MissionCasa : MonoBehaviour
     public void Desativar()
     {
         lendo = false;
+        podeAparecer = false;
         paraLer = false;
+        leu = true;
     }
 
     IEnumerator TempoCarta()
