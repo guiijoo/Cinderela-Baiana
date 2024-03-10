@@ -10,6 +10,9 @@ public class NightInteraction : MonoBehaviour
     public GameObject casaDaia;
     public GameObject casaNovaDaia;
     public GameObject jaula;
+    public GameObject tpCinderela;
+
+    public Transform Cinderela;
 
     public TextMeshProUGUI interagir;
     public TextMeshProUGUI missionTXT;
@@ -38,7 +41,9 @@ public class NightInteraction : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E))
             {
                 Vector3 posicaoPlayer = casaNovaDaia.transform.position;
+                Vector3 posCinderela = tpCinderela.transform.position;
                 player.transform.position = posicaoPlayer;
+                Cinderela.transform.position = posCinderela;
             }
 
         }else{
