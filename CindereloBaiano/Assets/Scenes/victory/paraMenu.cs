@@ -8,7 +8,7 @@ public class paraMenu : MonoBehaviour
 {
     void Update()
     {
-        if (!GetComponent<VideoPlayer>().isPlaying) // Verifica se o áudio da intro terminou
+        if (!GetComponent<AudioSource>().isPlaying) // Verifica se o áudio da intro terminou
             {
                 // Ative o Canvas UI do menu
                 PlayerPrefs.SetInt("jogou",1);

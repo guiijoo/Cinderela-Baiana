@@ -7,6 +7,11 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     public RawImage image;
+
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
     public void NovoJogo()
     {
         image.gameObject.SetActive(true);
