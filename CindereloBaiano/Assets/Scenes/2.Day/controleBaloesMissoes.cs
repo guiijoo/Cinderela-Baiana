@@ -18,6 +18,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject wesley;
 
     bool sairBool;
+    
     bool casa;
     bool banco;
     bool zebu;

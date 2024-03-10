@@ -145,7 +145,7 @@ public class Interaction : MonoBehaviour
                     GetComponent<MissionController>().igreja = true;
                     mensagemInteracao.gameObject.SetActive(false);
                     PlayerPrefs.SetInt("igreja", 1);
-                    GetComponent<controleBaloesMissoes>().Igreja();
+                    player.GetComponent<controleBaloesMissoes>().Igreja();
                 }
             }else if(GetComponent<MissionController>().igreja == true)
             {
