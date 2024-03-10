@@ -11,11 +11,22 @@
 </ul>    
 
 <h2> Dia </h2>
-<ul>
-    colocar audiop daia tetao mudou de casa
-    mudar as fotos externas
-    falas
-</ul>
+    * colocar audiop daia tetao mudou de casa
+    * mudar as fotos externas
+    * falas
+    * carta mae
+    * arvore bugada
+    * velocidade carlos
+    * parede sicoob
+    * barulho dinheiro
+    * foto sicoob carlso
+    * musica tiozao
+    * balao de texto
+    * movimentação??
+    * opção em novo jogo
+    * galeria
+    * atalhos cinderela
+    * coindereka ia
 
 <h2> Noite </h2>
 <ul>
