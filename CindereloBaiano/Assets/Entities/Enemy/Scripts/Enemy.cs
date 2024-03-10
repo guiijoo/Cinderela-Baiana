@@ -32,16 +32,21 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        navMesh.speed = velocidadeOriginal;
         navMesh.destination = player.transform.position;
         animInimigo.SetBool("walk", true);
 
-        if(Vector3.Distance(transform.position, player.transform.position) < 1.5f)
+        if(Vector3.Distance(transform.position, player.transform.position) < 2f)
         {
             navMesh.speed = 0f;
             ataque.SetActive(true);
             animInimigo.SetBool("attack", true);
             StartCoroutine("attack");
+        }else if(Vector3.Distance(transform.position, player.transform.position)>50f)
+        {
+            navMesh.speed = velocidadeOriginal + 30f;
+        }else if(Vector3.Distance(transform.position, player.transform.position)<=50f && Vector3.Distance(transform.position, player.transform.position)>=2f)
+        {
+            navMesh.speed = velocidadeOriginal;
         }
 
         if(raiva == true)
