@@ -10,6 +10,7 @@ TagManager:
   - OlhosRaiva
   - MissionText
   - paoFrances
+  - passaArco
   layers:
   - Default
   - TransparentFX
