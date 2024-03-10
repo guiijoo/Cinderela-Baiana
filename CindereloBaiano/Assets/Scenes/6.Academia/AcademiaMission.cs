@@ -68,5 +68,6 @@ public class AcademiaMission : MonoBehaviour
         carlosDrPenis.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);
         carlosDrPenis.gameObject.SetActive(false);
+        player.GetComponent<academiaBalao>().DrPenis();
     }
 }

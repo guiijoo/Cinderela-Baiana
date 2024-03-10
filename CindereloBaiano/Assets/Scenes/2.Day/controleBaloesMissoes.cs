@@ -18,7 +18,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject wesley;
 
     bool sairBool;
-    
+
     bool casa;
     bool banco;
     bool zebu;
@@ -109,7 +109,7 @@ public class controleBaloesMissoes : MonoBehaviour
 
     public void Igreja()
     {
-        textoBalao.text = "Holly shit police motherfucker!";
+        textoBalao.text = "Holly shit police motherfucker!\nEntão, já que é assim, vou conquistar o shape para as Primas!\nAté lá a missa já acabou.";
         StartCoroutine(Texto());
     }
 
