@@ -145,6 +145,7 @@ public class Interaction : MonoBehaviour
                     GetComponent<MissionController>().igreja = true;
                     mensagemInteracao.gameObject.SetActive(false);
                     PlayerPrefs.SetInt("igreja", 1);
+                    GetComponent<controleBaloesMissoes>().Igreja();
                 }
             }else if(GetComponent<MissionController>().igreja == true)
             {
@@ -220,7 +221,7 @@ public class Interaction : MonoBehaviour
                 player.transform.position = posicaoPlayer;
             }
 
-        }else if(Vector3.Distance(portaWesley.transform.position, player.transform.position) < 2f){ //interagindo com wesley
+        }else if(portaWesley.gameObject.activeSelf && Vector3.Distance(portaWesley.transform.position, player.transform.position) < 2f){ //interagindo com wesley
                 mensagemInteracao.text = "Aperte 'E' para entrar!";
                 mensagemInteracao.gameObject.SetActive(true);
                 if(Input.GetKeyDown(KeyCode.E))

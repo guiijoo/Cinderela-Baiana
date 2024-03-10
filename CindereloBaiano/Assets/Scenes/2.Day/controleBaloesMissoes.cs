@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class controleBaloesMissoes : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject imageCarlos;
     public GameObject imageCamila;
     public GameObject arco;
+    public GameObject wesley;
 
     bool sairBool;
     bool casa;
@@ -42,7 +44,11 @@ public class controleBaloesMissoes : MonoBehaviour
         velocidadePlayerC = GetComponent<Player>().velocidadeCorrida;
         sensibilidadeCamera = cameraa.GetComponent<CameraController>().Sensibilidade;
 
-        if(casa == true && banco == false)
+        if(casa == false)
+        {
+            textoBalao.text = "Ow shit... Here we go again!";
+            StartCoroutine(Texto());
+        }else if(casa == true && banco == false)
         {
             textoBalao.text = "Nossa, mas estou sem dinheiro...\n\nHum... Será que consigo roubar um banco?";
             StartCoroutine(Texto());
@@ -54,22 +60,29 @@ public class controleBaloesMissoes : MonoBehaviour
         {
             textoBalao.text = "Pronto, agora só entregar para ela.\nEla disse que estava na missa, ela sempre vai na igreja da praça.";
             StartCoroutine(Texto());
+        }else if(academia == true && praca == false)
+        {
+            textoBalao.text = "O que foi isso?!\nParece ter vindo da praça.";
+            StartCoroutine(Texto());
         }
     }
     void Update()
     {
         if(balaoTexto.activeSelf)
         {
+
             cameraa.GetComponent<CameraController>().Sensibilidade = 0;
             GetComponent<Player>().velocidadeAndar = 0;
             GetComponent<Player>().velocidadeCorrida = 0;
             GetComponent<Animator>().SetBool("lendo", true);
+            wesley.SetActive(false);
 
         }else{
             cameraa.GetComponent<CameraController>().Sensibilidade = sensibilidadeCamera;
             GetComponent<Player>().velocidadeAndar = velocidadePlayerA;
             GetComponent<Player>().velocidadeCorrida = velocidadePlayerC;
             GetComponent<Animator>().SetBool("lendo", false);
+            wesley.SetActive(true);
         }
 
 
@@ -91,6 +104,12 @@ public class controleBaloesMissoes : MonoBehaviour
             arco.SetActive(false);
             StartCoroutine(Texto());
         }
+    }
+
+    public void Igreja()
+    {
+        textoBalao.text = "Holly shit police motherfucker!";
+        StartCoroutine(Texto());
     }
 
     IEnumerator Texto()
