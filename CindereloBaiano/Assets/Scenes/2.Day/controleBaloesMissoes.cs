@@ -16,16 +16,45 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject arco;
 
     bool sairBool;
+    bool casa;
+    bool banco;
+    bool zebu;
+    bool igreja;
+    bool academia;
+    bool praca;
+
+
     bool coroutineStarted = false;
     float velocidadePlayerA;
     float velocidadePlayerC;
     float sensibilidadeCamera;
 
-    void Start()
+    void Awake()
     {
+        casa = PlayerPrefs.GetInt("praCasa", 0) == 1;
+        banco = PlayerPrefs.GetInt("banco", 0) ==1;
+        zebu = PlayerPrefs.GetInt("zebu", 0) == 1;
+        igreja = PlayerPrefs.GetInt("igreja", 0) == 1;
+        academia = PlayerPrefs.GetInt("academia", 0) == 1;
+        praca = PlayerPrefs.GetInt("praca",0) == 1;
+
         velocidadePlayerA = GetComponent<Player>().velocidadeAndar;
         velocidadePlayerC = GetComponent<Player>().velocidadeCorrida;
         sensibilidadeCamera = cameraa.GetComponent<CameraController>().Sensibilidade;
+
+        if(casa == true && banco == false)
+        {
+            textoBalao.text = "Nossa, mas estou sem dinheiro...\n\nHum... Será que consigo roubar um banco?";
+            StartCoroutine(Texto());
+        }else if(banco == true && zebu == false)
+        {
+            textoBalao.text = "Agora posso ir \"comprar\" coca e pão para minha mãe!";
+            StartCoroutine(Texto());
+        }else if(zebu == true && igreja == false)
+        {
+            textoBalao.text = "Pronto, agora só entregar para ela.\nEla disse que estava na missa, ela sempre vai na igreja da praça.";
+            StartCoroutine(Texto());
+        }
     }
     void Update()
     {
@@ -58,7 +87,7 @@ public class controleBaloesMissoes : MonoBehaviour
     {
         if(collider.gameObject.tag == "passaArco")
         {
-            textoBalao.text = "Preciso ir para casa!\nMinha mamãe deve estar preocupada!";
+            textoBalao.text = "Preciso ir para casa!\nMinha mãe deve estar preocupada!";
             arco.SetActive(false);
             StartCoroutine(Texto());
         }
@@ -70,10 +99,5 @@ public class controleBaloesMissoes : MonoBehaviour
         yield return new WaitForSeconds(5.0f);
         sair.gameObject.SetActive(true);
         sairBool = true;
-    }
-
-    public void SairCasa()
-    {
-        
     }
 }
