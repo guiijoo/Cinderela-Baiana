@@ -1671,10 +1671,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4282715368937224, guid: 39327451d36aac1409ec3750439e7a28, type: 3}
   m_PrefabInstance: {fileID: 555454873}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> teste
 --- !u!1 &582491285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,11 +1799,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-<<<<<<< HEAD
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
-=======
->>>>>>> teste
 --- !u!1 &589081649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3581,14 +3572,7 @@ MonoBehaviour:
   poderMaximo: 0
   velocidadeCorrida: 6
   velocidadeAndar: 4
-<<<<<<< HEAD
-<<<<<<< HEAD
   audioPassos: {fileID: 1678878856}
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
-=======
-  audioPassos: {fileID: 1678878856}
->>>>>>> teste
   cameraPlayer: {fileID: 131489690}
   textoAlteres: {fileID: 0}
   textoInicial: {fileID: 0}
@@ -3685,14 +3669,7 @@ Transform:
   - {fileID: 1274453825}
   - {fileID: 314107779}
   - {fileID: 1767527487}
-<<<<<<< HEAD
-<<<<<<< HEAD
   - {fileID: 1678878855}
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
-=======
-  - {fileID: 1678878855}
->>>>>>> teste
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 176.361, z: 0}
 --- !u!1 &1077896346
@@ -5405,10 +5382,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2146431462}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> teste
 --- !u!1 &1678878854
 GameObject:
   m_ObjectHideFlags: 0
@@ -5537,11 +5510,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-<<<<<<< HEAD
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
-=======
->>>>>>> teste
 --- !u!1 &1703081428
 GameObject:
   m_ObjectHideFlags: 0
@@ -11279,14 +11247,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-<<<<<<< HEAD
-<<<<<<< HEAD
   - {fileID: 582491286}
-=======
->>>>>>> 31e42d322ca6b007b4b41c2390ce00c8888a7aef
-=======
-  - {fileID: 582491286}
->>>>>>> teste
   - {fileID: 6907101080467469093}
   - {fileID: 3521037793441052502}
   - {fileID: 8467145980803595083}
