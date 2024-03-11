@@ -16,6 +16,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject imageCamila;
     public GameObject arco;
     public GameObject wesley;
+    public AudioSource audio;
 
     bool sairBool;
 
@@ -48,6 +49,7 @@ public class controleBaloesMissoes : MonoBehaviour
         if(casa == false)
         {
             textoBalao.text = "Ow shit... Here we go again!";
+            audio.Play();
             StartCoroutine(Texto());
         }else if(casa == true && banco == false)
         {
