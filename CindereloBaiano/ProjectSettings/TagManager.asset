@@ -11,6 +11,7 @@ TagManager:
   - MissionText
   - paoFrances
   - passaArco
+  - jaula
   layers:
   - Default
   - TransparentFX
