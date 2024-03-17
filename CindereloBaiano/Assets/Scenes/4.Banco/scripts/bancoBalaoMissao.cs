@@ -13,6 +13,7 @@ public class bancoBalaoMissao : MonoBehaviour
     public  GameObject cameraa;
     public TextMeshProUGUI sair;
     public GameObject imageCarlos;
+    public GameObject negroSkills;
 
     bool sairBool;
 
@@ -28,6 +29,7 @@ public class bancoBalaoMissao : MonoBehaviour
         velocidadePlayerC = GetComponent<Player>().velocidadeCorrida;
         sensibilidadeCamera = cameraa.GetComponent<CameraController>().Sensibilidade;
 
+        negroSkills.GetComponent<AudioSource>().Play();
         textoBalao.text = "Vou usar o conhecimento de quando trabalhei aqui para invadir o caixa eletrônico!";
         StartCoroutine(Texto());
     }
