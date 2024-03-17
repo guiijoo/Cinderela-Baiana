@@ -137,7 +137,7 @@ public class controleBaloesMissoes : MonoBehaviour
             textoBalao.text = "Preciso ir para casa!\nMinha mãe deve estar preocupada!";
             arco.SetActive(false);
             StartCoroutine(Texto());
-        }else if(collider.gameObject.tag == "jaula"){
+        }else if(collider.gameObject.tag == "jaula" && academia == true){
             textoBalao.text = "Ai Ai Ai Carlos. Ayuada me, soy Yo, Camila Mexicana!";
             colJaula.SetActive(false);
             StartCoroutine(FalaCamila());
