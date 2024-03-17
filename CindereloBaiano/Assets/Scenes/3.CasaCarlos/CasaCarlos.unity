@@ -3792,6 +3792,7 @@ MonoBehaviour:
   cameraa: {fileID: 287400902}
   carta: {fileID: 1581032810}
   balaoTxt: {fileID: 986484800}
+  cartaLendo: {fileID: 876824028}
   balaoCor: {fileID: 737410133}
   imageCarlos: {fileID: 1170654625}
   imageCamila: {fileID: 0}

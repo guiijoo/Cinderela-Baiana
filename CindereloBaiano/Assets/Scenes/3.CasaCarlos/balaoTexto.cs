@@ -13,6 +13,7 @@ public class balaoTexto : MonoBehaviour
 
     public GameObject carta;
     public GameObject balaoTxt;
+    public GameObject cartaLendo;
     public GameObject balaoCor;
     public GameObject imageCarlos;
     public GameObject imageCamila;
@@ -38,13 +39,18 @@ public class balaoTexto : MonoBehaviour
 
     void Update()
     {
-        if(balaoTxt.activeSelf)
+        if(balaoTxt.activeSelf && !cartaLendo.activeSelf)
         {
             cameraa.GetComponent<CameraController>().Sensibilidade = 0;
             GetComponent<Player>().velocidadeAndar = 0;
             GetComponent<Player>().velocidadeCorrida = 0;
             GetComponent<Animator>().SetBool("lendo", true);
 
+        }else if(!balaoTxt.activeSelf && cartaLendo.activeSelf){
+            cameraa.GetComponent<CameraController>().Sensibilidade = 0;
+            GetComponent<Player>().velocidadeAndar = 0;
+            GetComponent<Player>().velocidadeCorrida = 0;
+            GetComponent<Animator>().SetBool("lendo", true);
         }else{
             cameraa.GetComponent<CameraController>().Sensibilidade = sensibilidadeCamera;
             GetComponent<Player>().velocidadeAndar = velocidadePlayerA;
