@@ -54,7 +54,7 @@ public class SistemaMissaoBanco : MonoBehaviour
                     SceneManager.LoadScene("Day");
                 }
             }else{
-                missao.text = "Colete o dinheiro antes de sair!";
+                missao.text = "Roube o dinheiro antes de sair!";
                 missao.gameObject.SetActive(true);
             }
 

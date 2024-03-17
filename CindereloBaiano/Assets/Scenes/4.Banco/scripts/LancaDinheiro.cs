@@ -27,7 +27,7 @@ public class LancaDinheiro : MonoBehaviour
             }else{
                 dinheiro.gameObject.SetActive(true);
                 interacaoTexto.gameObject.SetActive(false);
-                missionText.text = "Você já roubou tudo! Seu preto!";
+                missionText.text = "HACHKEADO COM SUCESSO!\nVocê já roubou tudo! Seu preto!\n\nAgora recolha a maleta!";
                 missionText.gameObject.SetActive(true);
             }    
         }else{
