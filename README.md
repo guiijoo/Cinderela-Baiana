@@ -17,5 +17,4 @@
     - passa os balao de texto novo para todas as cenas
     - travar movimento e camera na carta da mae na casa do carlos
     - mudar mensagem do roubou tudo, seu preto   
-    - colocar carta cpfl
     - enfeitar a cidade
