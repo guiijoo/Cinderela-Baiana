@@ -19,6 +19,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject colJaula;
     public GameObject aaaaaai;
     public GameObject nonono;
+    public GameObject sonsIncompeensiveis;
 
     public AudioSource audio;
 
@@ -63,6 +64,7 @@ public class controleBaloesMissoes : MonoBehaviour
             StartCoroutine(Texto());
         }else if(banco == true && zebu == false)
         {
+            sonsIncompeensiveis.GetComponent<AudioSource>().Play();
             textoBalao.text = "Agora posso ir \"comprar\" coca e pão para minha mãe!";
             StartCoroutine(Texto());
         }else if(zebu == true && igreja == false)
