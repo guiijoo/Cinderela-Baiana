@@ -12,12 +12,10 @@ public class bancoBalaoMissao : MonoBehaviour
     public TextMeshProUGUI textoBalao;
     public  GameObject cameraa;
     public TextMeshProUGUI sair;
-    public GameObject imageCarlos;
     public GameObject negroSkills;
 
     bool sairBool;
 
-    bool coroutineStarted = false;
     float velocidadePlayerA;
     float velocidadePlayerC;
     float sensibilidadeCamera;

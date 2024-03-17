@@ -15,8 +15,6 @@ public class balaoTexto : MonoBehaviour
     public GameObject balaoTxt;
     public GameObject cartaLendo;
     public GameObject balaoCor;
-    public GameObject imageCarlos;
-    public GameObject imageCamila;
 
     public GameObject hollyOkok;
     public GameObject sexOnTheBeach;

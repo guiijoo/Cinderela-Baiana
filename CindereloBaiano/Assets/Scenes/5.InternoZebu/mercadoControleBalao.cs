@@ -12,7 +12,6 @@ public class mercadoControleBalao : MonoBehaviour
     public TextMeshProUGUI textoBalao;
     public  GameObject cameraa;
     public TextMeshProUGUI sair;
-    public GameObject imageCarlos;
 
     bool sairBool;
 
