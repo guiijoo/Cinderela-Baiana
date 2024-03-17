@@ -25,6 +25,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject camilaMexicana;
     public GameObject taGostosinha;
     public GameObject carta;
+    public GameObject caiuLuz;
 
     public AudioSource audio;
 
@@ -92,6 +93,7 @@ public class controleBaloesMissoes : MonoBehaviour
             GetComponent<Player>().velocidadeCorrida = 0;
             GetComponent<Animator>().SetBool("lendo", true);
             wesley.SetActive(false);
+            carta.SetActive(false);
 
         }else{
             cameraa.GetComponent<CameraController>().Sensibilidade = sensibilidadeCamera;
@@ -99,6 +101,7 @@ public class controleBaloesMissoes : MonoBehaviour
             GetComponent<Player>().velocidadeCorrida = velocidadePlayerC;
             GetComponent<Animator>().SetBool("lendo", false);
             wesley.SetActive(true);
+            carta.SetActive(true);
         }
 
 
@@ -155,6 +158,14 @@ public class controleBaloesMissoes : MonoBehaviour
             camilaMexicana.GetComponent<AudioSource>().Play();
             StartCoroutine(FalaCamila());
         }
+    }
+
+    public void Carta()
+    {
+        caiuLuz.GetComponent<AudioSource>().Play();
+        textoBalao.text = "Pelo visto o prefeito não pagou a conta.\n\nVamos ficar sem luz hoje.\n\nAinda bem que sempre ando com minha lanterna!";
+        balaoTexto.GetComponent<mudaCor>().BalaoCarlos();
+        StartCoroutine(Texto());
     }
 
     public void Igreja()

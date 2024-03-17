@@ -256,6 +256,7 @@ public class Interaction : MonoBehaviour
                 {                
                     mensagemInteracao.gameObject.SetActive(false);    
                     cartaCpfl.GetComponent<CartaCPFL>().CartaAberta();
+                    GetComponent<controleBaloesMissoes>().Carta();
                 }
 
             }
