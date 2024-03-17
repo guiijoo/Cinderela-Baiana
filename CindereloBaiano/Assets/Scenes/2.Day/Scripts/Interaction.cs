@@ -4,11 +4,14 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
     public TextMeshProUGUI missionText;
     public TextMeshProUGUI mensagemInteracao;
+    public TextMeshProUGUI mensagemSair;
+
     public GameObject portaCasa;
     public GameObject portaBanco;
     public GameObject portaMercado;
@@ -17,10 +20,13 @@ public class Interaction : MonoBehaviour
     public GameObject casaDaia;
     public GameObject casaNovaDaia;
     public GameObject portaWesley;
+    public GameObject cartaCpfl;
 
     public GameObject jaula;
 
     public GameObject player;
+
+    public bool podeSair;
 
     void Start()
     {
@@ -229,9 +235,35 @@ public class Interaction : MonoBehaviour
                     PlayerPrefs.SetFloat("playerPosZ", playerPosition.z);
                     SceneManager.LoadScene("WesleyLavacar");
                 }
+        }else if(Vector3.Distance(cartaCpfl.transform.position, player.transform.position)<1.5){
+
+            if(podeSair == true)
+            {
+                mensagemSair.text = "Aperte 'E' para sair"; 
+                mensagemSair.gameObject.SetActive(true);
+                mensagemInteracao.gameObject.SetActive(false);
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    cartaCpfl.GetComponent<CartaCPFL>().FechaCarta();
+                }
+
+            }else{
+                mensagemSair.gameObject.SetActive(false);
+                mensagemInteracao.text = "Aperte 'E' para ver!";
+                mensagemInteracao.gameObject.SetActive(true);
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {                
+                    mensagemInteracao.gameObject.SetActive(false);    
+                    cartaCpfl.GetComponent<CartaCPFL>().CartaAberta();
+                }
+
+            }
+
         }else{
                 missionText.gameObject.SetActive(false);
                 mensagemInteracao.gameObject.SetActive(false);
+                mensagemSair.gameObject.SetActive(false);
         }
     }
 }
