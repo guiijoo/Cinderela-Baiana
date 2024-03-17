@@ -17,6 +17,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject arco;
     public GameObject wesley;
     public GameObject colJaula;
+    public GameObject aaaaaai;
 
     public AudioSource audio;
 
@@ -134,6 +135,7 @@ public class controleBaloesMissoes : MonoBehaviour
     {
         if(collider.gameObject.tag == "passaArco")
         {
+            aaaaaai.GetComponent<AudioSource>().Play();
             textoBalao.text = "Preciso ir para casa!\nMinha mãe deve estar preocupada!";
             arco.SetActive(false);
             StartCoroutine(Texto());
