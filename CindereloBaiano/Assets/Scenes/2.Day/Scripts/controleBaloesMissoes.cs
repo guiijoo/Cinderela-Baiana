@@ -20,6 +20,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject aaaaaai;
     public GameObject nonono;
     public GameObject sonsIncompeensiveis;
+    public GameObject saidaIgreja;
 
     public AudioSource audio;
 
@@ -137,7 +138,7 @@ public class controleBaloesMissoes : MonoBehaviour
     }
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.tag == "passaArco")
+        if(collider.gameObject.tag == "passaArco" && casa == false)
         {
             aaaaaai.GetComponent<AudioSource>().Play();
             textoBalao.text = "Preciso ir para casa!\nMinha mãe deve estar preocupada!";
@@ -152,6 +153,7 @@ public class controleBaloesMissoes : MonoBehaviour
 
     public void Igreja()
     {
+        saidaIgreja.GetComponent<AudioSource>().Play();
         textoBalao.text = "Holly shit police motherfucker!\nEntão, já que é assim, vou conquistar o shape para as Primas!\nAté lá a missa já acabou.";
         balaoTexto.GetComponent<mudaCor>().BalaoCarlos();
         StartCoroutine(Texto());
