@@ -21,6 +21,9 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject nonono;
     public GameObject sonsIncompeensiveis;
     public GameObject saidaIgreja;
+    public GameObject portaEcamila;
+    public GameObject camilaMexicana;
+    public GameObject taGostosinha;
 
     public AudioSource audio;
 
@@ -35,7 +38,6 @@ public class controleBaloesMissoes : MonoBehaviour
     bool praca;
 
 
-    bool coroutineStarted = false;
     float velocidadePlayerA;
     float velocidadePlayerC;
     float sensibilidadeCamera;
@@ -74,6 +76,7 @@ public class controleBaloesMissoes : MonoBehaviour
             StartCoroutine(Texto());
         }else if(academia == true && praca == false)
         {
+            portaEcamila.GetComponent<AudioSource>().Play();
             textoBalao.text = "O que foi isso?!\nParece ter vindo da praça.";
             StartCoroutine(Texto());
         }
@@ -115,6 +118,7 @@ public class controleBaloesMissoes : MonoBehaviour
                     sair.gameObject.SetActive(false);
                     balaoTexto.SetActive(false);
                     dialogos++;
+                    taGostosinha.GetComponent<AudioSource>().Play();
                 }
         }else if(dialogos == 2)
         {
@@ -147,6 +151,7 @@ public class controleBaloesMissoes : MonoBehaviour
         }else if(collider.gameObject.tag == "jaula" && academia == true){
             textoBalao.text = "Ai Ai Ai Carlos. Ayuada me, soy Yo, Camila Mexicana!";
             colJaula.SetActive(false);
+            camilaMexicana.GetComponent<AudioSource>().Play();
             StartCoroutine(FalaCamila());
         }
     }
