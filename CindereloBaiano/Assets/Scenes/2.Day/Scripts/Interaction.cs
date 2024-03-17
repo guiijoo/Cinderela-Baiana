@@ -235,7 +235,7 @@ public class Interaction : MonoBehaviour
                     PlayerPrefs.SetFloat("playerPosZ", playerPosition.z);
                     SceneManager.LoadScene("WesleyLavacar");
                 }
-        }else if(Vector3.Distance(cartaCpfl.transform.position, player.transform.position)<1.5){
+        }else if(Vector3.Distance(cartaCpfl.transform.position, player.transform.position)<1.5){ // interagindo com a carta da CPFL
 
             if(podeSair == true)
             {

@@ -24,6 +24,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject portaEcamila;
     public GameObject camilaMexicana;
     public GameObject taGostosinha;
+    public GameObject carta;
 
     public AudioSource audio;
 
@@ -83,7 +84,7 @@ public class controleBaloesMissoes : MonoBehaviour
     }
     void Update()
     {
-        if(balaoTexto.activeSelf)
+        if(balaoTexto.activeSelf || carta.activeSelf)
         {
 
             cameraa.GetComponent<CameraController>().Sensibilidade = 0;
