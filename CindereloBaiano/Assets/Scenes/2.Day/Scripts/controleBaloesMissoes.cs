@@ -12,8 +12,6 @@ public class controleBaloesMissoes : MonoBehaviour
     public TextMeshProUGUI textoBalao;
     public  GameObject cameraa;
     public TextMeshProUGUI sair;
-    public GameObject imageCarlos;
-    public GameObject imageCamila;
     public GameObject arco;
     public GameObject wesley;
     public GameObject colJaula;
@@ -25,6 +23,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject camilaMexicana;
     public GameObject taGostosinha;
     public GameObject carta;
+    public GameObject cartaOBJ;
     public GameObject caiuLuz;
 
     public AudioSource audio;
@@ -85,7 +84,7 @@ public class controleBaloesMissoes : MonoBehaviour
     }
     void Update()
     {
-        if(balaoTexto.activeSelf || carta.activeSelf)
+        if(balaoTexto.activeSelf && !carta.activeSelf)
         {
 
             cameraa.GetComponent<CameraController>().Sensibilidade = 0;
@@ -93,15 +92,23 @@ public class controleBaloesMissoes : MonoBehaviour
             GetComponent<Player>().velocidadeCorrida = 0;
             GetComponent<Animator>().SetBool("lendo", true);
             wesley.SetActive(false);
-            carta.SetActive(false);
+            cartaOBJ.SetActive(false);
 
+        }else if(carta.activeSelf && !balaoTexto.activeSelf)
+        {
+
+            cameraa.GetComponent<CameraController>().Sensibilidade = 0;
+            GetComponent<Player>().velocidadeAndar = 0;
+            GetComponent<Player>().velocidadeCorrida = 0;
+            GetComponent<Animator>().SetBool("lendo", true);
+            wesley.SetActive(false);
         }else{
             cameraa.GetComponent<CameraController>().Sensibilidade = sensibilidadeCamera;
             GetComponent<Player>().velocidadeAndar = velocidadePlayerA;
             GetComponent<Player>().velocidadeCorrida = velocidadePlayerC;
             GetComponent<Animator>().SetBool("lendo", false);
             wesley.SetActive(true);
-            carta.SetActive(true);
+            cartaOBJ.SetActive(true);
         }
 
 

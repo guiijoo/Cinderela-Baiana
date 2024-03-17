@@ -235,20 +235,21 @@ public class Interaction : MonoBehaviour
                     PlayerPrefs.SetFloat("playerPosZ", playerPosition.z);
                     SceneManager.LoadScene("WesleyLavacar");
                 }
-        }else if(Vector3.Distance(cartaCpfl.transform.position, player.transform.position)<1.5){ // interagindo com a carta da CPFL
+        }else if(cartaCpfl.activeSelf && Vector3.Distance(cartaCpfl.transform.position, player.transform.position)<1.5){ // interagindo com a carta da CPFL
 
             if(podeSair == true)
             {
                 mensagemSair.text = "Aperte 'E' para sair"; 
                 mensagemSair.gameObject.SetActive(true);
-                mensagemInteracao.gameObject.SetActive(false);
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     cartaCpfl.GetComponent<CartaCPFL>().FechaCarta();
+                    player.GetComponent<controleBaloesMissoes>().Carta();
+                    mensagemSair.gameObject.SetActive(false);
+                    podeSair = false;
                 }
 
             }else{
-                mensagemSair.gameObject.SetActive(false);
                 mensagemInteracao.text = "Aperte 'E' para ver!";
                 mensagemInteracao.gameObject.SetActive(true);
 
@@ -256,7 +257,7 @@ public class Interaction : MonoBehaviour
                 {                
                     mensagemInteracao.gameObject.SetActive(false);    
                     cartaCpfl.GetComponent<CartaCPFL>().CartaAberta();
-                    GetComponent<controleBaloesMissoes>().Carta();
+                    podeSair = true;
                 }
 
             }
