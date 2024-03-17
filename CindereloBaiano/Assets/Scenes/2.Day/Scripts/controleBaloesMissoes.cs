@@ -18,6 +18,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject wesley;
     public GameObject colJaula;
     public GameObject aaaaaai;
+    public GameObject nonono;
 
     public AudioSource audio;
 
@@ -57,6 +58,7 @@ public class controleBaloesMissoes : MonoBehaviour
             StartCoroutine(Texto());
         }else if(casa == true && banco == false)
         {
+            nonono.GetComponent<AudioSource>().Play();
             textoBalao.text = "Nossa, mas estou sem dinheiro...\n\nHum... Será que consigo roubar um banco?";
             StartCoroutine(Texto());
         }else if(banco == true && zebu == false)

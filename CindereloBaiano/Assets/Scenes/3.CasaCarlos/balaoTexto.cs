@@ -17,6 +17,9 @@ public class balaoTexto : MonoBehaviour
     public GameObject imageCarlos;
     public GameObject imageCamila;
 
+    public GameObject hollyOkok;
+    public GameObject sexOnTheBeach;
+
     bool sairBool;
     bool coroutineStarted = false;
     float velocidadePlayerA;
@@ -25,6 +28,7 @@ public class balaoTexto : MonoBehaviour
 
     void Start()
     {
+        hollyOkok.GetComponent<AudioSource>().Play();
         textoBalao.text = "Humm...\nMinha mãe não esta em casa. Mas ela sempre deixa uma carta, quando isso acontece.\nPreciso encontra-la!";
         StartCoroutine(Texto());
         velocidadePlayerA = GetComponent<Player>().velocidadeAndar;
@@ -63,6 +67,7 @@ public class balaoTexto : MonoBehaviour
             textoBalao.text = "Preciso ir comprar coca e pão para minha mãe!";
             if(!coroutineStarted)
             {
+                sexOnTheBeach.GetComponent<AudioSource>().Play(); 
                 StartCoroutine(Texto());
                 coroutineStarted = true;
             }
