@@ -25,7 +25,7 @@ public class balaoTexto : MonoBehaviour
 
     void Start()
     {
-        textoBalao.text = "Humm...\nMamãe não esta em casa. Mas ela sempre deixa uma carta, quando isso acontece.\nPreciso encontra-la!";
+        textoBalao.text = "Humm...\nMinha mãe não esta em casa. Mas ela sempre deixa uma carta, quando isso acontece.\nPreciso encontra-la!";
         StartCoroutine(Texto());
         velocidadePlayerA = GetComponent<Player>().velocidadeAndar;
         velocidadePlayerC = GetComponent<Player>().velocidadeCorrida;
@@ -60,7 +60,7 @@ public class balaoTexto : MonoBehaviour
 
         if(carta.GetComponent<MissionCasa>().leu == true)
         {
-            textoBalao.text = "Preciso ir comprar coca e pão para a mamãe!";
+            textoBalao.text = "Preciso ir comprar coca e pão para minha mãe!";
             if(!coroutineStarted)
             {
                 StartCoroutine(Texto());
