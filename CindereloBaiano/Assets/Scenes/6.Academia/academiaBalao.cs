@@ -12,7 +12,7 @@ public class academiaBalao : MonoBehaviour
     public TextMeshProUGUI textoBalao;
     public  GameObject cameraa;
     public TextMeshProUGUI sair;
-    public GameObject imageCarlos;
+    public GameObject drPenis;
 
     bool sairBool;
 
@@ -34,14 +34,23 @@ public class academiaBalao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(balaoTexto.activeSelf)
+        if(balaoTexto.activeSelf && !drPenis.activeSelf)
         {
 
             cameraa.GetComponent<CameraController>().Sensibilidade = 0;
             GetComponent<Player>().velocidadeAndar = 0;
             GetComponent<Player>().velocidadeCorrida = 0;
             GetComponent<Animator>().SetBool("lendo", true);
+        }else if(!balaoTexto.activeSelf && drPenis.activeSelf)
+        {
+
+            cameraa.GetComponent<CameraController>().Sensibilidade = 0;
+            GetComponent<Player>().velocidadeAndar = 0;
+            GetComponent<Player>().velocidadeCorrida = 0;
+            GetComponent<Animator>().SetBool("lendo", true);
+
         }else{
+            
             cameraa.GetComponent<CameraController>().Sensibilidade = sensibilidadeCamera;
             GetComponent<Player>().velocidadeAndar = velocidadePlayerA;
             GetComponent<Player>().velocidadeCorrida = velocidadePlayerC;
