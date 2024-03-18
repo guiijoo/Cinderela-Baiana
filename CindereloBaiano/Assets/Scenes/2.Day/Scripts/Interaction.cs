@@ -270,7 +270,8 @@ public class Interaction : MonoBehaviour
             mensagemInteracao.gameObject.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                
+                player.GetComponent<controleBaloesMissoes>().Gordao();
+                mensagemInteracao.gameObject.SetActive(false);
             }
         }else{
                 missionText.gameObject.SetActive(false);

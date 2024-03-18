@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
-using UnityEngine.ProBuilder.MeshOperations;
 
 public class bancoBalaoMissao : MonoBehaviour
 {

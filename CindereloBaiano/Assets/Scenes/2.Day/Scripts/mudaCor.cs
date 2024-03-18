@@ -1,11 +1,4 @@
-using Microsoft.Unity.VisualStudio.Editor;
-using Unity.VisualScripting;
-using UnityEditor.UI;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
-using System.Collections;
-using System.Collections.Generic;
 
 public class mudaCor : MonoBehaviour
 {
