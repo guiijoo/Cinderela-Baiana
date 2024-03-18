@@ -11,6 +11,4 @@
     - velocidade carlos
     - musica tiozao
     - balao de texto
-    - opção em novo jogo
     - galeria
-    - arrumar game over
