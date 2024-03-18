@@ -25,6 +25,8 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject carta;
     public GameObject cartaOBJ;
     public GameObject caiuLuz;
+    public GameObject ronco;
+    public GameObject gordao;
 
     public AudioSource audio;
 
@@ -84,19 +86,18 @@ public class controleBaloesMissoes : MonoBehaviour
     }
     void Update()
     {
-        if(balaoTexto.activeSelf && !carta.activeSelf)
+        if(!carta.activeSelf && balaoTexto.activeSelf)
         {
-
             cameraa.GetComponent<CameraController>().Sensibilidade = 0;
             GetComponent<Player>().velocidadeAndar = 0;
             GetComponent<Player>().velocidadeCorrida = 0;
             GetComponent<Animator>().SetBool("lendo", true);
             wesley.SetActive(false);
             cartaOBJ.SetActive(false);
+            gordao.SetActive(false);
 
         }else if(carta.activeSelf && !balaoTexto.activeSelf)
         {
-
             cameraa.GetComponent<CameraController>().Sensibilidade = 0;
             GetComponent<Player>().velocidadeAndar = 0;
             GetComponent<Player>().velocidadeCorrida = 0;
@@ -109,6 +110,7 @@ public class controleBaloesMissoes : MonoBehaviour
             GetComponent<Animator>().SetBool("lendo", false);
             wesley.SetActive(true);
             cartaOBJ.SetActive(true);
+            gordao.SetActive(true);
         }
 
 
@@ -172,6 +174,14 @@ public class controleBaloesMissoes : MonoBehaviour
         caiuLuz.GetComponent<AudioSource>().Play();
         textoBalao.text = "Pelo visto o prefeito não pagou a conta.\n\nVamos ficar sem luz hoje.\n\nAinda bem que sempre ando com minha lanterna!";
         balaoTexto.GetComponent<mudaCor>().BalaoCarlos();
+        StartCoroutine(Texto());
+    }
+
+    public void Gordao()
+    {
+        ronco.GetComponent<AudioSource>().Play();
+        textoBalao.text = "zzzzzzzzzzzzzzz...";
+        balaoTexto.GetComponent<mudaCor>().BalaoGordao();
         StartCoroutine(Texto());
     }
 

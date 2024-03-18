@@ -21,6 +21,8 @@ public class Interaction : MonoBehaviour
     public GameObject casaNovaDaia;
     public GameObject portaWesley;
     public GameObject cartaCpfl;
+    public GameObject daiaTetao;
+    public GameObject gordao;
 
     public GameObject jaula;
 
@@ -221,6 +223,7 @@ public class Interaction : MonoBehaviour
             {
                 Vector3 posicaoPlayer = casaNovaDaia.transform.position;
                 player.transform.position = posicaoPlayer;
+                daiaTetao.GetComponent<AudioSource>().Play();
             }
 
         }else if(portaWesley.gameObject.activeSelf && Vector3.Distance(portaWesley.transform.position, player.transform.position) < 2f){ //interagindo com wesley
@@ -262,6 +265,13 @@ public class Interaction : MonoBehaviour
 
             }
 
+        }else if(gordao.activeSelf && Vector3.Distance(gordao.transform.position, player.transform.position)<2f){
+            mensagemInteracao.text = "'E' para cutucar o Gordo!";
+            mensagemInteracao.gameObject.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                
+            }
         }else{
                 missionText.gameObject.SetActive(false);
                 mensagemInteracao.gameObject.SetActive(false);
