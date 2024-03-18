@@ -5,10 +5,7 @@
 
 <h1> ainda falta finalizar: </h1>
 
-    - colocar audiop daia tetao mudou de casa
     - mudar as fotos externas
-    - falas
     - velocidade carlos
-    - musica tiozao
-    - balao de texto
     - galeria
+    - missoes canto da tela
