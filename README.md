@@ -14,7 +14,3 @@
     - opção em novo jogo
     - galeria
     - arrumar game over
-    - passa os balao de texto novo para todas as cenas
-    - travar movimento e camera na carta da mae na casa do carlos
-    - mudar mensagem do roubou tudo, seu preto   
-    - enfeitar a cidade
