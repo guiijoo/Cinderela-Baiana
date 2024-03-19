@@ -9,6 +9,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public TextMeshProUGUI textoBalao;
     public  GameObject cameraa;
     public TextMeshProUGUI sair;
+    public TextMeshProUGUI texto_missao;
     public GameObject arco;
     public GameObject wesley;
     public GameObject colJaula;
@@ -24,6 +25,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public GameObject caiuLuz;
     public GameObject ronco;
     public GameObject gordao;
+    public GameObject canva_missao_canto;
 
     public AudioSource audio;
 
@@ -57,25 +59,34 @@ public class controleBaloesMissoes : MonoBehaviour
 
         if(casa == false)
         {
+            texto_missao.text = "Va para casa.";
             textoBalao.text = "Ow shit... Here we go again!";
             audio.Play();
             StartCoroutine(Texto());
         }else if(casa == true && banco == false)
         {
+            canva_missao_canto.SetActive(true);
+            texto_missao.text = "Roube um Banco.";
             nonono.GetComponent<AudioSource>().Play();
             textoBalao.text = "Nossa, mas estou sem dinheiro...\n\nHum... Será que consigo roubar um banco?";
             StartCoroutine(Texto());
         }else if(banco == true && zebu == false)
         {
+            canva_missao_canto.SetActive(true);
+            texto_missao.text = "Roube o mercado.";
             sonsIncompeensiveis.GetComponent<AudioSource>().Play();
             textoBalao.text = "Agora posso ir \"comprar\" coca e pão para minha mãe!";
             StartCoroutine(Texto());
         }else if(zebu == true && igreja == false)
         {
+            canva_missao_canto.SetActive(true);
+            texto_missao.text = "Leve os itens para sua mãe.";
             textoBalao.text = "Pronto, agora só entregar para ela.\nEla disse que estava na missa, ela sempre vai na igreja da praça.";
             StartCoroutine(Texto());
         }else if(academia == true && praca == false)
         {
+            canva_missao_canto.SetActive(true);
+            texto_missao.text = "Vá ver oq aconteceu na praça!";
             portaEcamila.GetComponent<AudioSource>().Play();
             textoBalao.text = "O que foi isso?!\nParece ter vindo da praça.";
             StartCoroutine(Texto());
@@ -154,11 +165,14 @@ public class controleBaloesMissoes : MonoBehaviour
     {
         if(collider.gameObject.tag == "passaArco" && casa == false)
         {
+            canva_missao_canto.SetActive(true);
             aaaaaai.GetComponent<AudioSource>().Play();
             textoBalao.text = "Preciso ir para casa!\nMinha mãe deve estar preocupada!";
             arco.SetActive(false);
             StartCoroutine(Texto());
         }else if(collider.gameObject.tag == "jaula" && academia == true){
+            canva_missao_canto.SetActive(true);
+            texto_missao.text = "Vá conquistar o Shape!";
             textoBalao.text = "Ai Ai Ai Carlos. Ayuada me, soy Yo, Camila Mexicana!";
             colJaula.SetActive(false);
             camilaMexicana.GetComponent<AudioSource>().Play();

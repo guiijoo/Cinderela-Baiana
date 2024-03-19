@@ -42,8 +42,8 @@ public class NightInteraction : MonoBehaviour
             {
                 Vector3 posicaoPlayer = casaNovaDaia.transform.position;
                 Vector3 posCinderela = tpCinderela.transform.position;
-                player.transform.position = posicaoPlayer;
                 Cinderela.transform.position = posCinderela;
+                player.transform.position = posicaoPlayer;
             }
 
         }else{
