@@ -8,9 +8,5 @@
     - mudar as fotos externas
     - velocidade carlos
     - galeria
-    - missoes canto da tela
-    - casa daia não funcionando
-    - coisas sumiram
-    - chao bugado
     - letra por cima na jaula
     - espalhar altere
