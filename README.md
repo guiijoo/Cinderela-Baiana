@@ -8,5 +8,7 @@
     - mudar as fotos externas
     - velocidade carlos
     - galeria
-    - letra por cima na jaula
     - espalhar altere
+    - arrumar rua
+    - arrumar calçada
+    
