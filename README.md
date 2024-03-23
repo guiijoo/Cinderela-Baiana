@@ -4,11 +4,3 @@
 
 
 <h1> ainda falta finalizar: </h1>
-
-    - mudar as fotos externas
-    - velocidade carlos
-    - galeria
-    - espalhar altere
-    - arrumar rua
-    - arrumar calçada
-    
