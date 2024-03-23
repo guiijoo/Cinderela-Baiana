@@ -50,4 +50,9 @@ public class MenuController : MonoBehaviour
     {
         galeria.SetActive(true);      
     }
+
+    public void SairGaleria()
+    {
+        galeria.SetActive(false);
+    }
 }
