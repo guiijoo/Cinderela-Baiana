@@ -12,12 +12,19 @@ public class NightInteraction : MonoBehaviour
     public GameObject jaula;
     public GameObject tpCinderela;
 
-    public Transform Cinderela;
+    public Transform cinderela;
 
     public TextMeshProUGUI interagir;
     public TextMeshProUGUI missionTXT;
     public GameObject textoInicial;
+    Vector3 posCinderela;
+    Vector3 posicaoPlayer;
     
+    void Start()
+    {
+        posCinderela = tpCinderela.transform.position;
+        posicaoPlayer = casaNovaDaia.transform.position;
+    }
     void Update()
     {
 
@@ -44,10 +51,10 @@ public class NightInteraction : MonoBehaviour
                 interagir.gameObject.SetActive(true);
                 if(Input.GetKeyDown(KeyCode.E))
                 {
-                    Vector3 posicaoPlayer = casaNovaDaia.transform.position;
-                    Vector3 posCinderela = tpCinderela.transform.position;
-                    Cinderela.transform.position = posCinderela;
-                    player.transform.position = posicaoPlayer;
+                    cinderela.gameObject.SetActive(false);
+                    cinderela.position = posCinderela;
+                    player.position = posicaoPlayer;
+                    cinderela.gameObject.SetActive(true);
                 }
 
             }else{
