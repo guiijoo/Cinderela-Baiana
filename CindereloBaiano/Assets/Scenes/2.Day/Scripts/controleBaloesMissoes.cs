@@ -198,6 +198,7 @@ public class controleBaloesMissoes : MonoBehaviour
 
     public void Igreja()
     {
+        texto_missao.text = "Vá conquistar o shape!";  
         saidaIgreja.GetComponent<AudioSource>().Play();
         textoBalao.text = "Holly shit police motherfucker!\nEntão, já que é assim, vou conquistar o shape para as Primas!\nAté lá a missa já acabou.";
         balaoTexto.GetComponent<mudaCor>().BalaoCarlos();
