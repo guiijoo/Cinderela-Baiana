@@ -59,7 +59,7 @@ public class controleBaloesMissoes : MonoBehaviour
 
         if(casa == false)
         {
-            texto_missao.text = "Va para casa.";
+            texto_missao.text = "Vá para sua casa.";
             textoBalao.text = "Ow shit... Here we go again!";
             audio.Play();
             StartCoroutine(Texto());
@@ -68,7 +68,7 @@ public class controleBaloesMissoes : MonoBehaviour
             canva_missao_canto.SetActive(true);
             texto_missao.text = "Roube um Banco.";
             nonono.GetComponent<AudioSource>().Play();
-            textoBalao.text = "Nossa, mas estou sem dinheiro...\n\nHum... Será que consigo roubar um banco?";
+            textoBalao.text = "Nossa, mas estou sem dinheiro...\nHum... Será que consigo roubar um banco?";
             StartCoroutine(Texto());
         }else if(banco == true && zebu == false)
         {
@@ -86,7 +86,7 @@ public class controleBaloesMissoes : MonoBehaviour
         }else if(academia == true && praca == false)
         {
             canva_missao_canto.SetActive(true);
-            texto_missao.text = "Vá ver oq aconteceu na praça!";
+            texto_missao.text = "Veja o que aconteceu na praça!";
             portaEcamila.GetComponent<AudioSource>().Play();
             textoBalao.text = "O que foi isso?!\nParece ter vindo da praça.";
             StartCoroutine(Texto());
@@ -183,7 +183,7 @@ public class controleBaloesMissoes : MonoBehaviour
     public void Carta()
     {
         caiuLuz.GetComponent<AudioSource>().Play();
-        textoBalao.text = "Pelo visto o prefeito não pagou a conta.\n\nVamos ficar sem luz hoje.\n\nAinda bem que sempre ando com minha lanterna!";
+        textoBalao.text = "Pelo visto o prefeito não pagou a conta.\nVamos ficar sem luz hoje.\nAinda bem que sempre ando com minha lanterna!";
         balaoTexto.GetComponent<mudaCor>().BalaoCarlos();
         StartCoroutine(Texto());
     }
